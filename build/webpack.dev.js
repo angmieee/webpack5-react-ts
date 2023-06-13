@@ -11,9 +11,10 @@ module.exports = merge(baseConfig, {
     port: 3000, // 服务端口号
     compress: false, // gzip压缩,开发环境不开启,提升热更新速度
     hot: true, // 开启热更新
+    open: true, // 是否自动打开浏览器
     historyApiFallback: true, // 解决history路由404问题
     static: {
-      directory: path.join(__dirname, "../public"), //托管静态资源public文件夹
+      directory: path.join(__dirname, "../public"), //告诉服务器内容从托管静态资源public文件夹提供
     }
   },
 })
